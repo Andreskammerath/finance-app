@@ -1,0 +1,33 @@
+version: '3'
+services:
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_USER: "financial_app_user"
+      POSTGRES_PASSWORD: "financial_app_password"
+      POSTGRES_DB: "financial_app_db"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  web:
+    build:
+      context: .
+      dockerfile: api.Dockerfile
+    command: ["uvicorn", "main:api", "--workers", "2", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/app:ro
+    environment:
+      DATABASE_URL: postgres://financial_app_user:financial_app_password@db:5432/financial_app_db
+    depends_on:
+      - db
+  frontend:
+    build:
+      context: .
+      dockerfile: front.Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./fe-finance-app/:/app:ro
+volumes:
+  postgres-data:

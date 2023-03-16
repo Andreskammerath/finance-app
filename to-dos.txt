@@ -1,0 +1,29 @@
+- create categories and subcategories
+Incomes:
+
+Salary/Wages
+Bonuses
+Investment Income
+Rent Income
+Government Benefits
+Gifts/Inheritance
+Miscellaneous
+
+Expenses:
+
+Housing (rent/mortgage, utilities, insurance)
+Transportation (car payments, fuel, maintenance, public transportation)
+Food (groceries, eating out)
+Personal Care (grooming, clothing, sports)
+Healthcare (insurance, copays, medications)
+Debt Repayment (loans, credit cards)
+Taxes
+Savings
+Miscellaneous
+
+- create the admin column in the user table
+- update readme with the new db model, etc.
+- create the endpoints that we still need
+- Allow to create custom subcategories?
+- Fix docker-compose with react issue.
+- FE (On it!)

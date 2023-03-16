@@ -1,0 +1,35 @@
+
+P
+ finance_app/api/security/auth.py,7/5/75d908ea27130de920c023d02951de8d7e37d3e3
+K
+finance_app/schemas/auth.py,a/a/aaeddf8dcf8729aabf8a162de3b3ed975b69d182
+N
+fe-finance-app/src/App.test.js,a/9/a9b0137aa749308742367e627d7bd9e44b475eca
+Z
+*fe-finance-app/src/components/LoginPage.js,3/9/39398bd9cb9d51f1c09674af1ecf9205663025e2
+Q
+!fe-finance-app/src/pages/About.js,5/b/5b55d4985fbfb16b5ce806d6f3047aa46fc86379
+T
+$finance_app/api/endpoints/budgets.py,d/0/d001221251a5f96e9f401dbbcae876810f890a40
+I
+fe-finance-app/src/App.js,f/f/ffb48b2d5c7f911c283c9f7454070de4df9ef44c
+P
+ fe-finance-app/src/pages/Home.js,f/8/f822c1682be5e161837e80e277ebedc230f9f515
+O
+finance_app/utils/connection.py,f/0/f09f093770edac884f4c727808b0fdcdaebc8c33
+a
+1fe-finance-app/src/components/TransactionsPage.js,a/e/ae57138452ef2fcb295cb2ef31d194b956c3a885
+Y
+)fe-finance-app/src/components/BarChart.js,e/e/eea75965c0ebca08dc2ad9d818305616de1254bc
+\
+,fe-finance-app/src/components/TotalIncone.js,a/e/ae18d54ea8a6f3cdfd5f9a9d955ba6e372194acb
+P
+ fe-finance-app/src/css/style.css,c/3/c3c116fd338e3438ca21b5b9b414e62d8cf2f951
+\
+,fe-finance-app/src/css/transactionScreen.css,c/5/c517f27f388d549a49042b9135d9afcd6d7eb59a
+Y
+)fe-finance-app/src/components/HomePage.js,1/5/150605dcc5b15480fac34d81d4d24c20a1763e4f
+S
+#finance_app/schemas/transactions.py,8/e/8e51db55ff886769039d6a4f01ffd001692b6a47
+Y
+)finance_app/api/endpoints/transactions.py,5/5/5587b918b67e9959c03f71d62fdf0a6d746237ab
