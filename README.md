@@ -1,4 +1,8 @@
-# Financial App - by Andy Kammerath
+# Financial App - by Andy Kammerath  
+To run it:
+```shell
+docker-compose up --build
+```
 Project structure:
 ```shell
 my_project/
