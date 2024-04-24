@@ -7,7 +7,7 @@ async def get_db():
         host="db",
         port=5432,
         user="financial_app_user",
-        password="financial_app_password",
+        password="fpassword",
         database="financial_app_db"
     )
     return conn

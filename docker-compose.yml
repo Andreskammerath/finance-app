@@ -4,10 +4,13 @@ services:
     image: postgres:12
     environment:
       POSTGRES_USER: "financial_app_user"
-      POSTGRES_PASSWORD: "financial_app_password"
+      POSTGRES_PASSWORD: "fpassword"
       POSTGRES_DB: "financial_app_db"
     volumes:
       - postgres-data:/var/lib/postgresql/data
+      - ./dump_db.sql:/docker-entrypoint-initdb.d/dump_db.sql
+    ports:
+      - 5000:5432
   web:
     build:
       context: .
@@ -18,16 +21,16 @@ services:
     volumes:
       - ./:/app:ro
     environment:
-      DATABASE_URL: postgres://financial_app_user:financial_app_password@db:5432/financial_app_db
+      DATABASE_URL: postgres://financial_app_user:fpassword@db:5432/financial_app_db
     depends_on:
       - db
-  frontend:
-    build:
-      context: .
-      dockerfile: front.Dockerfile
-    ports:
-      - 3000:3000
-    volumes:
-      - ./fe-finance-app/:/app:ro
+  # frontend:
+  #   build:
+  #     context: .
+  #     dockerfile: front.Dockerfile
+  #   ports:
+  #     - 3000:3000
+  #   volumes:
+  #     - ./fe-finance-app/:/app:ro
 volumes:
   postgres-data:
