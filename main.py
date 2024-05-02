@@ -9,6 +9,7 @@ origins = [
     "https://localhost.tiangolo.com",
     "http://localhost:3000",
     "http://localhost:8080",
+    "http://0.0.0.0:3000",
 ]
 api.add_middleware(
     CORSMiddleware,

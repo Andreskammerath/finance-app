@@ -90,7 +90,9 @@ async def get_current_active_user(current_user: User = Depends(get_current_user)
 @router.post("/login", response_model=Token)
 async def login(user_login: UserLogin, db: asyncpg.Connection = Depends(get_db)):
     user = await authenticate_user(user_login.email, user_login.password)
-    if user is None:
+    print("\n"*20)
+    print(f"User: {user}")
+    if user in (None, False):
         raise HTTPException(status_code=400, detail="Incorrect username or password")
     if not verify_password(user_login.password, user.hashed_password):
         raise HTTPException(status_code=400, detail="Incorrect username or password")

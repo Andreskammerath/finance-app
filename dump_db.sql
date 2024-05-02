@@ -278,7 +278,14 @@ ALTER TABLE ONLY public.transactions
     ADD CONSTRAINT transactions_user_email_fkey FOREIGN KEY (user_email) REFERENCES public.users(email);
 
 
---
--- PostgreSQL database dump complete
---
+INSERT INTO public.users (username, email, full_name, disabled, hashed_password)
+VALUES ('andy', 'a@a.com', 'andy', false, '$2b$12$zJVr6jsJlzQWfZrhul9c3ueTqcawbwXk98QJzgRokePulPjm630.i');
+
+INSERT INTO public.categories (name) VALUES ('Salario');
+
+INSERT INTO public.budgets (category_id, amount, start_date, end_date) VALUES (1, 1000000, '2024-04-01', '2024-04-30');
+
+INSERT INTO public.transactions (amount, description, date, category_id, type, user_email)
+VALUES (900000, 'Salario Andres', '2024-04-19', 1, 'income', 'a@a.com');
+
 

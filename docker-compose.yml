@@ -24,13 +24,15 @@ services:
       DATABASE_URL: postgres://financial_app_user:fpassword@db:5432/financial_app_db
     depends_on:
       - db
-  # frontend:
-  #   build:
-  #     context: .
-  #     dockerfile: front.Dockerfile
-  #   ports:
-  #     - 3000:3000
-  #   volumes:
-  #     - ./fe-finance-app/:/app:ro
+  frontend:
+    build:
+      context: .
+      dockerfile: front.Dockerfile
+    command: ["npm", "run", "dev"]
+    ports:
+      - 3000:3000
+    volumes:
+      - ./front/:/app
+      - /app/node_modules
 volumes:
   postgres-data:
